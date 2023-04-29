@@ -1,0 +1,416 @@
+/* lato-regular - latin */
+ @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lato-v23-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v23-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* lato-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/lato-v23-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v23-latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* lato-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/lato-v23-latin-900.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v23-latin-900.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /*HTML STYLES - размер содержимого остается постоянным, а границы и отступы изменяются внутри элемента*/
+  html{
+    box-sizing: border-box;
+}
+
+/*Все элементы на странице и их псевдоэлементы должны наследовать значение свойства box-sizing от своих родительских элементов*/
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+/*Body установит стиль шрифта, размер, высоту линий во всем Body*/
+body{
+    font-family: 'Lato';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    
+}
+
+/*HEADER - Фиксация хедера */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*HEADER - Ширина Хедера*/
+.wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/*HEADER - для более четкого прописания структуры хедера и элементов в нем*/
+.header_wrapper{
+    display: flex;  /*адаптивные макеты, могут легко меняться в зависимости от размеров экрана и устройства, на котором они отображаются.*/
+    flex-wrap: wrap; /*дочерние элементы контейнера flex переноситься на новую строку или столбец при нехватке места на текущей строке или столбце.*/
+    align-items: flex-end; /*выравнивание по нижнему краю */
+    justify-content: space-between; /*определяет, как браузер распределяет пространство между и вокруг элементов*/
+    line-height: 55px;}
+
+
+ /*HEADER ССЫЛКИ - делает элементы блочными для ССЫЛОК*/   
+.header_list{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/*HEADER ССЫЛКИ - Расстояние между ссылками хедера и их фиксация */
+.header_item{
+    margin-right: 16px;
+    display: block;
+    margin-block: 35px;
+    color: aliceblue;
+    
+      
+}
+
+/*HEADER ССЫДКИ - Цвет ссылок хедера и их расположение */
+.header_link{
+    color: white;
+    font-size: 16px;
+    line-height: 55px;
+    text-decoration: none;
+}
+
+/*HEADER ССЫДКИ - Состояние наведения, таба, клика ссылок хедера */
+.header_link:hover, .header_link:focus, .header_link:active {
+    opacity: .85;
+}
+
+/*WELCOME MAIN INTRO ОСНОВНАЯ ИНФА СТРАНИЦЫ - Стили для бэкграунда, вставляем фото на фон*/
+.intro{
+    min-height: 100vh;
+    background: url(../img/svg/gottwald-k6ZY7oq70eY-unsplash\ 1.svg) no-repeat center;
+    background-size: cover;
+    padding-top: 263px;
+    padding-left: 203px;
+    
+    
+}
+
+/*WELCOME MAIN INTRO-TITLE ОСНОВНАЯ ИНФА СТРАНИЦЫ ЗАГОЛОВОК - Стили для заголовка - максим ширина, размер, величина простарства между строками*/
+.intro-title{
+    max-width: 1054px;
+    Font-size: 120px;
+    line-height: 144px;
+    color: white;
+    margin-bottom: 42px;
+    
+}
+
+/*WELCOME MAIN INTRO ОСНОВНАЯ ИНФА СТРАНИЦЫ КНОПКИ - Стили для кнопки вход - цвет бека, цвет текста, высота формы, длинна формы, станавливает распределение пространства между и вокруг элементами контента и по вертикали*/
+.sign-in{
+    background-color: #5C8F34;
+    color: #FFFFFF;
+    height: 39px;
+    width: 68px;
+    font-size: 16px;
+    line-height: 19px;
+    line-height: 100%;
+    vertical-align: Top;
+    border-radius: 13px;
+    
+    
+    
+}
+
+/*WELCOME MAIN INTRO ОСНОВНАЯ ИНФА СТРАНИЦЫ КНОПКИ - Стили наведения на кнопку, наведения, tab, нажатия*/
+.sign-in:hover, .sign-in:focus, .sign-in:active {
+    background: #37561f;
+}
+
+/*WELCOME MAIN INTRO ОСНОВНАЯ ИНФА СТРАНИЦЫ КНОПКИ - Стили для кнопки вход - цвет бека, цвет текста, высота формы, длинна формы, станавливает распределение пространства между и вокруг элементами контента и по вертикали*/
+.sign-up{
+    background-color: #8F3434;
+    color: #FFFFFF;
+    height: 39px;
+    width: 75px;
+    font-size: 16px;
+    line-height: 19px;
+    line-height: 100%;
+    vertical-align: Top;
+    border-radius: 13px;
+    
+}
+
+/*WELCOME MAIN INTRO ОСНОВНАЯ ИНФА СТРАНИЦЫ КНОПКИ - Стили кнопки, наведения, tab, нажатия*/
+.sign-up:hover, .sign-up:focus, .sign-up:active {
+    background: #671d1d;
+}
+
+/*LOGIN MAIN INTRO ОСНОВНАЯ ИНФА СТРАНИЦЫ - Стили для утсановки фона Логин страницы*/
+.intro-login{
+    min-height: 100vh;
+    background: url(../img/svg/gottwald-k6ZY7oq70eY-unsplash\ 1.svg) no-repeat center;
+    background-size: cover;
+    
+    
+}
+
+/*LOGIN MAIN LOGIN_TITLE ОСНОВНАЯ ИНФА СТРАНИЦЫ - Стили для Заголовка логин формы*/
+.login-title{
+    padding-top: 300px;
+    padding-left: 627px;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+
+}
+
+
+/*LOGIN MAIN FORM-FIELD ОСНОВНАЯ ИНФА СТРАНИЦЫ - Стили для положения Input fields Логин страницы*/
+.form-field{
+    margin-bottom: 15px;
+    padding-left: 566px;
+}
+
+/*LOGIN MAIN INPUT ОСНОВНАЯ ИНФА СТРАНИЦЫ - Стили для Input fields Логин страницы*/
+input{
+    width: 315px;
+    height: 39px;
+    border-radius: 83px;
+    background-color: #D9D9D9;
+    
+}
+
+/*LOGIN MAIN BUTTONS ОСНОВНАЯ ИНФА СТРАНИЦЫ - Стили для положения кнопок Логин страницы*/
+.form-buttons{
+    padding-left: 650px;
+}
+
+/*LOGIN MAIN BUTTONS ОСНОВНАЯ ИНФА СТРАНИЦЫ - Стили для кнопки Sign in Логин страницы*/
+.login{
+    color: #FFFFFF;
+    background-color: #5C8F34;
+    width: 59px;
+    height: 39px;
+    border-radius: 13px;
+}
+
+/*LOGIN MAIN BUTTONS ОСНОВНАЯ ИНФА СТРАНИЦЫ - Стили наведения на кнопку, наведения, tab, нажатия*/
+.login:hover, .sign-in:focus, .sign-in:active {
+    background: #37561f;
+}
+
+/*LOGIN MAIN BUTTONS ОСНОВНАЯ ИНФА СТРАНИЦЫ - Стили для кнопки Back Логин страницы*/
+.back{
+    color: #FFFFFF;
+    background-color: #8F3434;
+    width: 59px;
+    height: 39px;
+    border-radius: 13px;
+}
+
+/*LOGIN MAIN BUTTONS ОСНОВНАЯ ИНФА СТРАНИЦЫ - Стили наведения на кнопку, наведения, tab, нажатия*/
+.back:hover, .sign-up:focus, .sign-up:active {
+    background: #671d1d;
+}
+
+/*LOGIN MAIN CHECKBOX - Cтиль для элемента label, используется для создания кастомного чекбокса*/
+label {
+    display: block;
+    margin-bottom: 10px;
+    position: relative; /*Изменяет положение элемента относительно его исходного местоположения, cохраняет свое место в потоке, не влияет на расположение элументов*/
+    cursor: pointer; /*Показывает пользователю что данный жлемент кликабельный */
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  
+  /*LOGIN MAIN CHECKBOX - Cтиль для элемента input с типом "checkbox", используется для скрытия стандартного чекбокса.*/
+  label input[type="checkbox"] {
+    position: absolute; /*Абсолютное позиционирование элемента относительно его ближайшего РОД элемента, позволяет изменять его положение и наложение на другие элементы*/
+    top: 0;
+    left: 100px;
+    visibility: hidden;
+  }
+  
+  /*LOGIN MAIN CHECKBOX - стиль для элемента span внутри элемента label, используется для создания текста, связанного с чекбоксом.*/
+  label span {
+    padding-left: 25px;
+    color: #FFFFFF;
+  }
+  
+  /*LOGIN MAIN CHECKBOX - Cтиль для псевдоэлемента :before, используется для создания кастомного чекбокса.*/
+  label:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  /*LOGIN MAIN CHECKBOX - стиль для псевдоэлемента :before, используется для изменения кастомного чекбокса при выборе (отметке) соответствующего чекбокса.*/
+  label input[type="checkbox"]:checked ~ span:before {
+    content: "\2713"; /*Используется для добавления контента внутрь псевдоэлементов ::before и ::after*, является символьным кодом для специального символа галочки (✓)*/
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    font-size: 24px;
+    line-height: 1;
+    color: #333;
+  }
+
+/*OFFERS MAIN INTRO-OFFERS ОСНОВНАЯ ИНФА СТРАНИЦЫ - Стили для утсановки фона Offers*/
+.intro-offers{
+    min-height: 100vh;
+    background: url(../img/svg/gottwald-k6ZY7oq70eY-unsplash\ 1.svg) no-repeat center;
+    background-size: cover;
+    padding-top: 0px;
+    padding-left: 203px;
+}
+
+/*OFFERS MAIN OFFERS-TITLE ОСНОВНАЯ ИНФА СТРАНИЦЫ - Стили для утсановки Заголовка Оффер-1*/
+.offers-title{
+    max-width: 722px;
+    padding-top: 189px;
+    Font-size: 32px;
+    line-height: 30px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/*OFFERS MAIN INTRO-OFFERS ОСНОВНАЯ ИНФА СТРАНИЦЫ - Стили для утсановки параграфа Оффер-1*/
+.offer-1{
+    max-width: 722px;
+    color: white;
+    margin-bottom: 28px;
+    font-size: 24px;
+    line-height: 29px;
+
+}
+
+/*OFFERS MAIN INTRO-OFFERS ОСНОВНАЯ ИНФА СТРАНИЦЫ - Стили для утсановки Заголовка Оффер-2*/
+.offers-title-2{
+    max-width: 722px;
+    Font-size: 32px;
+    line-height: 30px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/*OFFERS MAIN INTRO-OFFERS ОСНОВНАЯ ИНФА СТРАНИЦЫ - Стили для утсановки параграфа Оффер-2*/
+.offer-2{
+    max-width: 722px;
+    color: white;
+    margin-bottom: 28px;
+    font-size: 24px;
+    line-height: 29px;
+
+}
+
+/*OFFERS MAIN INTRO-OFFERS ОСНОВНАЯ ИНФА СТРАНИЦЫ - Стили для утсановки Заголовка Оффер-2*/
+.offers-title-3{
+    max-width: 722px;
+    Font-size: 32px;
+    line-height: 30px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/*OFFERS MAIN INTRO-OFFERS ОСНОВНАЯ ИНФА СТРАНИЦЫ - Стили для утсановки параграфа Оффер-2*/
+.offer-3{
+    max-width: 722px;
+    color: white;
+    margin-bottom: 28px;
+    font-size: 24px;
+    line-height: 29px;
+
+}
+
+/*AFTER-LOGIN MAIN INTRO-AFTER - Стили для фона страницы*/
+.intro-after-login{
+    min-height: 100vh;
+    background: url(../img/svg/gottwald-k6ZY7oq70eY-unsplash\ 1.svg) no-repeat center;
+    background-size: cover;
+    
+}
+
+/*AFTER-LOGIN MAIN CARDS - Стили для блока картинок определяют сетку, которая состоит из трех столбцов*/
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
+  
+}
+
+/*AFTER-LOGIN MAIN CARD-PIC - Стили для блока картинок, задаем положение с верху и с лева*/
+.card_pic{
+    margin-top: 314px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    
+}
+
+/*AFTER-LOGIN MAIN - Делаем отступ между картинками и кнопками*/
+.card_bl{
+    margin-bottom: 23px;
+}
+
+/*AFTER-LOGIN MAIN BUTTONS - Стили для кнопок под картинками*/
+.pic_button{
+    background-color: #5C8F34;
+    color: #FFFFFF;
+    width: 231px;
+    height: 44px;
+    margin-left:22px;
+    border-radius: 13px;
+}
+
+/*AFTER-LOGIN MAIN BUTTONS - Стили наведения на кнопку, наведения, tab, нажатия*/
+.pic_button:hover, .pic_button:focus, .pic_button:active {
+    background: #37561f;
+}
+
+/*ABOUT US TITLE - About us стили для Заголовка*/
+.about_us_title{
+    max-width: 1054px;
+    Font-size: 120px;
+    line-height: 144px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/*ABOUT US TITLE - About us стили для параграфа*/
+.about_us_par{
+    max-width: 805px;
+    color: #FFFFFF;
+}
+
+
+
+    
+
+
+
+
+  
+  
+  
